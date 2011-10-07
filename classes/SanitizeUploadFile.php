@@ -67,6 +67,9 @@ class SanitizeUploadFile {
 	 */
 	public function init($arrayfile) {
 		if( $this->upload_dir != '' ) {
+			if(!file_exists($this->upload_dir)){
+				mkdir($this->upload_dir, 0777);
+			}
 			$this->uploadAttachedFile($arrayfile);
 		} else {
 			echo 'Without directory to upload?.';
