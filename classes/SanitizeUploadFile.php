@@ -17,18 +17,7 @@
  * 
 	HOW TO
 	------
-	if($_POST){
-		$instance = new SanitizeUploadFile($_FILES['filename']);
-		$instance->renameFile = true;
-		
-		Options
-		$instance->upload = true;
-		$instance->upload_dir = 'uploads/';
-		
-		Optionals
-		$instance->prefixSuggest = 'yeremi_';
-		$instance->allowedExt = 'jpg|png';
-	}	
+	Read on README file	
  **/
 
 class SanitizeUploadFile {
