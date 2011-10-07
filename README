@@ -1,0 +1,27 @@
+SanitizeUploadFile
+version : 0.0.1
+author Yeremi Loli (yeremiloli@yahoo.com)
+
+Sanitize & Upload Files
+Created on 06/10/2011
+Sanitize & Upload Files.
+ - Replace many accented letters to clean letters.
+ - Give a prefix using microtime(true). More explanation in http://php.net/manual/en/function.microtime.php
+ - Give a unique name using unique() php function. More explanation in http://php.net/manual/en/function.uniqid.php
+ - Joins the new name and new extension.
+ - Upload files. Multi or a single file. 
+ - Verify allowed extensions. 
+
+------------
+  HOW TO
+-----------
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+	include 'classes/SanitizeUploadFile.php';
+	$obj = new SanitizeUploadFile();
+	$obj->upload_dir = 'uploads/';
+	$instance->renameFile = true;
+	$instance->prefixSuggest = 'y_';
+	//$instance->allowedExt = 'jpg|jpeg|png'; //Optional
+	$obj->init( $_FILES['uploads'] );
+}
