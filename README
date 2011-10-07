@@ -17,7 +17,11 @@ Sanitize & Upload Files.
 -----------
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
+<<<<<<< HEAD
 	include 'classes/SanitizeUploadFile.php';
+=======
+  include 'classes/SanitizeUploadFile.php';
+>>>>>>> 135960a523933a25309446ee1eba18bace27af4f
 	$obj = new SanitizeUploadFile();
 	$obj->upload_dir = 'uploads/';
 	$instance->renameFile = true;
